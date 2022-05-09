@@ -1,4 +1,4 @@
 # sebastianhaber.github.io
 portfolio page
 
-slider -> (swiperjs.com/)[https://swiperjs.com/]
+slider -> https://swiperjs.com/
