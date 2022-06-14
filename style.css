@@ -51,7 +51,7 @@ main{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 1rem auto 0;
     z-index: 1;
 }
 .image{
@@ -93,11 +93,27 @@ img{
     width: 100%;
 }
 .swiper-wrapper{
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 .swiper-slide{
     max-width: 600px;
-    width: 100%;
+    padding: 0 1rem;
 }
-
+#swipe{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    animation: swipe 1.5s ease infinite;
+}
+@keyframes swipe {
+    0%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(50%);
+    }
+}
   
