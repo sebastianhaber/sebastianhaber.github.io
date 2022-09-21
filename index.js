@@ -61,6 +61,14 @@ const technologies = [
 
 const projects = [
   {
+    title: "Bezbekownia BETA",
+    tech: "React, ContextAPI, TailwindCSS, PHP REST API + MySQL",
+    description:
+      "Webapp with memes. Join our growing community and upload, upvote other's memes and comment!",
+    link: "https://beta.bezbekownia.pages.dev/",
+    imageUrl: "./assets/bezbekownia BETA.png",
+  },
+  {
     title: "E-Commerce Fake Shop",
     tech: "React, ContextAPI, styled-components, FakerAPI",
     description: "",
