@@ -64,7 +64,7 @@ const projects = [
     title: "Bezbekownia BETA",
     tech: "React, ContextAPI, TailwindCSS, PHP REST API + MySQL",
     description:
-      "Webapp with memes. Join our growing community and upload, upvote other's memes and comment!",
+      "Web App with memes. Join our growing community and upload, upvote and comment memes!",
     link: "https://beta.bezbekownia.pages.dev/",
     imageUrl: "./assets/bezbekownia BETA.png",
   },
