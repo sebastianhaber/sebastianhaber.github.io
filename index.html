@@ -20,14 +20,15 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
   </head>
 
   <body
     onload="loadData()"
-    class="bg-black text-white min-h-[100vh] max-w-[1200px] w-full mx-auto"
+    class="bg-black text-white min-h-[100vh] max-w-[1200px] w-full mx-auto scroll"
   >
     <!-- top -->
     <section class="sticky top-0 bg-black/80 w-full p-4 z-10">
@@ -42,24 +43,24 @@
     <!-- content -->
     <section class="p-4">
       <div class="flex flex-wrap gap-8">
-        <div>
+        <div id="aboutme">
           <h1 class="text-2xl font-bold">✋🏻 Hi, I’m Sebastian.</h1>
           <p class="text-neutral-400">Frontend Developer from Gdańsk, Poland</p>
         </div>
       </div>
 
-      <div class="mt-4 text-neutral-400">
+      <div class="mt-4 text-neutral-400" id="description">
         <p>
           I’m an IT student (2nd year) with passion for Frontend Development.
         </p>
         <p>👇🏻 Down there you can check what technologies I use.</p>
       </div>
       <div class="mt-12">
-        <p class="font-bold text-2xl">🔧 Technologies</p>
+        <p id="heading-tech" class="font-bold text-2xl">🔧 Technologies</p>
         <ul id="tech" class="flex flex-wrap gap-4 list-none mt-4"></ul>
       </div>
       <div class="mt-12">
-        <p class="font-bold text-2xl">📝 Projects</p>
+        <p id="heading-projects" class="font-bold text-2xl">📝 Projects</p>
         <ul id="projects" class="flex flex-wrap gap-4 list-none mt-4"></ul>
       </div>
     </section>

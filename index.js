@@ -1,3 +1,9 @@
+window.scrollTo(0, 0);
+const aboutMe = document.getElementById("aboutme");
+const techContainer = document.getElementById("tech");
+const socialmediaContainer = document.getElementById("socialmedia");
+const projectsContainer = document.getElementById("projects");
+
 const socialMedia = [
   {
     displayName: "GitHub",
@@ -50,12 +56,20 @@ const technologies = [
     icon: `<iconify-icon icon="logos:sass"></iconify-icon>`,
   },
   {
+    name: "LESS",
+    icon: `<iconify-icon icon="logos:less"></iconify-icon>`,
+  },
+  {
     name: "Git",
     icon: `<iconify-icon icon="logos:git-icon"></iconify-icon>`,
   },
   {
     name: "Figma",
     icon: `<iconify-icon icon="logos:figma"></iconify-icon>`,
+  },
+  {
+    name: "BEM",
+    icon: `<iconify-icon icon="logos:bem"></iconify-icon>`,
   },
 ];
 
@@ -109,13 +123,7 @@ const projects = [
 const badgeClassName =
   "bg-neutral-900 text-white font-bold flex gap-2 items-center py-2 px-4 rounded-lg cursor-pointer hover:bg-neutral-300 transition-colors";
 
-const loadData = () => {
-  loadSocialMedia();
-  loadTechnologies();
-  loadProjects();
-};
 const loadSocialMedia = () => {
-  const socialmediaContainer = document.getElementById("socialmedia");
   let socialmediaChild = "";
 
   socialMedia.map((media) => {
@@ -130,21 +138,19 @@ const loadSocialMedia = () => {
   socialmediaContainer.innerHTML = socialmediaChild;
 };
 const loadTechnologies = () => {
-  const techContainer = document.getElementById("tech");
   let techChild = "";
 
   technologies.map((tech) => {
     techChild += `
-                <li class='${badgeClassName} cursor-auto hover:bg-neutral-900'>
-                ${tech.icon}
-                ${tech.name}
+                <li class='${badgeClassName} cursor-auto hover:bg-neutral-900 technology'>
+                  ${tech.icon}
+                  ${tech.name}
                 </li>
             `;
   });
   techContainer.innerHTML = techChild;
 };
 const loadProjects = () => {
-  const projectsContainer = document.getElementById("projects");
   let projectsChild = "";
 
   projects.map((project) => {
@@ -174,4 +180,58 @@ const loadProjects = () => {
     `;
   });
   projectsContainer.innerHTML = projectsChild;
+};
+
+const loadData = () => {
+  loadSocialMedia();
+  loadTechnologies();
+  loadProjects();
+
+  gsap.from(socialmediaContainer.children, {
+    y: "-=100",
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.5,
+    delay: 6,
+    ease: "elastic.out(1, 0.3)",
+  });
+  gsap.from(document.getElementById("heading-tech"), {
+    opacity: 0,
+    stagger: 0.2,
+    delay: 3,
+  });
+  gsap.from(techContainer.children, {
+    y: "+=100",
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.1,
+    delay: 3,
+    ease: "back.out(1.7)",
+  });
+  gsap.from(document.getElementById("heading-projects"), {
+    opacity: 0,
+    stagger: 0.2,
+    delay: 4,
+  });
+  gsap.from(projectsContainer.children, {
+    y: "+=100",
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    delay: 4,
+    ease: "bounce.out",
+  });
+  gsap.from(aboutMe.children, {
+    x: "-=100",
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    delay: 1,
+    ease: "bounce.out",
+  });
+  gsap.from(document.getElementById("description").children, {
+    opacity: 0,
+    stagger: 0.2,
+    delay: 2,
+  });
 };
