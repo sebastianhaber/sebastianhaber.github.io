@@ -28,28 +28,16 @@ const socialMedia = [
 ];
 const technologies = [
   {
-    name: "ReactJS",
+    name: "React",
     icon: `<iconify-icon icon="logos:react"></iconify-icon>`,
   },
   {
-    name: "React Native (begginer)",
-    icon: `<iconify-icon icon="logos:react"></iconify-icon>`,
+    name: "Redux",
+    icon: `<iconify-icon icon="logos:redux"></iconify-icon>`,
   },
   {
     name: "TailwindCSS",
     icon: `<iconify-icon icon="logos:tailwindcss-icon"></iconify-icon>`,
-  },
-  {
-    name: "GraphQL",
-    icon: `<iconify-icon icon="logos:graphql"></iconify-icon>`,
-  },
-  {
-    name: "MySQL",
-    icon: `<iconify-icon icon="logos:mysql-icon"></iconify-icon>`,
-  },
-  {
-    name: "PHP (basic knowledge)",
-    icon: `<iconify-icon icon="logos:php"></iconify-icon>`,
   },
   {
     name: "SASS (SCSS)",
@@ -60,6 +48,18 @@ const technologies = [
     icon: `<iconify-icon icon="logos:less"></iconify-icon>`,
   },
   {
+    name: "GraphQL",
+    icon: `<iconify-icon icon="logos:graphql"></iconify-icon>`,
+  },
+  {
+    name: "MySQL",
+    icon: `<iconify-icon icon="logos:mysql-icon"></iconify-icon>`,
+  },
+  {
+    name: "PHP",
+    icon: `<iconify-icon icon="logos:php"></iconify-icon>`,
+  },
+  {
     name: "Git",
     icon: `<iconify-icon icon="logos:git-icon"></iconify-icon>`,
   },
@@ -68,7 +68,7 @@ const technologies = [
     icon: `<iconify-icon icon="logos:figma"></iconify-icon>`,
   },
   {
-    name: "BEM",
+    name: "BEM Methodology",
     icon: `<iconify-icon icon="logos:bem"></iconify-icon>`,
   },
 ];
